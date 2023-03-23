@@ -17,6 +17,7 @@ export class BankAccount {
     if(this.opened==false){
       throw new ValueError();
     }
+    this.balances=0;
     this.opened=false;
   }
   deposit(amount) {
