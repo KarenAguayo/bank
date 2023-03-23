@@ -8,9 +8,11 @@ export class BankAccount {
     this.balances=0;
     Boolean(this.opened);
   }
-  open() {
-  
+  open() {if(this.opened==true){
+    throw new ValueError();
   }
+  this.opened=true;
+}
   close() {
     if(this.opened==false){
       throw new ValueError();
