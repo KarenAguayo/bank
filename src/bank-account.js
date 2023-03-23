@@ -18,20 +18,18 @@ export class BankAccount {
 
   deposit(amount) 
   {
-     this.balances=amount;
+     this.balances+=amount;
   }
-  }
+  
 
   withdraw() {
     throw new Error("Remove this statement and implement this function");
   }
 
   get balance() {
-    return 0;
     return this.balances;
   }
 }
-
 export class ValueError extends Error {
   constructor() {
     super("Bank account error");
