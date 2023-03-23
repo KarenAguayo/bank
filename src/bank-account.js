@@ -8,27 +8,24 @@ export class BankAccount {
     this.balances=0;
     Boolean(this.opened);
   }
-
   open() {
-    
+  
   }
-
   close() {
     this.opened=false;
   }
-
-  deposit(amount) 
-  {
+  deposit(amount) {
     if(this.opened==false){
       throw new ValueError();
     }
     this.balances+=amount;
   }
-  
 
   withdraw(amount) {
-    this.balances-=amount;  
-  }
+    if(this.opened==false){
+      throw new ValueError();
+    }
+    this.balances-=amount;  }
 
   get balance() {
     if(this.opened==false){
